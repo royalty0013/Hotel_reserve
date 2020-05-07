@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+    <meta name="description" content="Hotel Template">
+    <meta name="keywords" content="Hotel, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title> {% block title %} {% endblock %} </title>
+
+	<link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{% static 'hotel_app/css/bootstrap.min.css' type="text/css %}" >
+    <link rel="stylesheet" href="{% static 'hotel_app/css/font-awesome.min.css' type="text/css %}">
+    <link rel="stylesheet" href="{% static 'hotel_app/css/flaticon.css' type="text/css %}">
+    <link rel="stylesheet" href="{% static 'hotel_app/css/owl.carousel.min.css' type="text/css %}">
+    <link rel="stylesheet" href="{% static 'hotel_app/css/jquery-ui.min.css' type="text/css %}">
+    <link rel="stylesheet" href="{% static 'hotel_app/css/nice-select.css' type="text/css %}">
+    <link rel="stylesheet" href="{% static 'hotel_app/css/magnific-popup.css' type="text/css %}">
+    <link rel="stylesheet" href="{% static 'hotel_app/css/slicknav.min.css' type="text/css %}">
+    <link rel="stylesheet" href="{% static 'hotel_app/css/style.css' type="text/css %}">
+</head>
+
+
+	{% block content %}
+
+	{% endblock %}
+
+
+
+</html>

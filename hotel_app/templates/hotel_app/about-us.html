@@ -1,0 +1,352 @@
+{% extends 'hotel_app/base.html' %}
+
+{%  load static %}
+{% block title %} Blue-Jack Hotel & Spa | About us {% endblock %}
+
+{% block content %}
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="inner-header">
+                <div class="logo">
+                    <a href="{% url 'index' %}"><img src="{% static 'hotel_app/img/logo2.png' %}" alt=""></a>
+                </div>
+                <div class="nav-right">
+                    <a href="#" class="primary-btn">Make a Reservation</a>
+                </div>
+                <nav class="main-menu mobile-menu">
+                    <ul>
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li class="active"><a href="{% url 'about' %}">About</a></li>
+                        <li><a href="{% url 'rooms' %}">Rooms</a></li>
+                        <li><a href="rooms.html">Pages</a>
+                            <ul class="drop-menu">
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="rooms.html">Rooms</a></li>
+                                <li><a href="services.html">Services</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="{% url 'blog' %}">News</a></li>
+                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                    </ul>
+                </nav>
+                <div id="mobile-menu-wrap"></div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Area Section Begin -->
+    <div class="hero-area set-bg other-page" data-setbg="{% static 'hotel_app/img/hero-bg1.jpg' %}">
+    </div>
+    <!-- Hero Area Section End -->
+
+    <!-- Search Filter Section Begin -->
+    <section class="search-filter other-page-filter">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <form action="#" class="check-form">
+                        <h4>Check Availability</h4>
+                        <div class="datepicker">
+                            <p>From</p>
+                            <input type="text" class="datepicker-1" value="dd / mm / yyyy">
+                            <img src="{% static 'hotel_app/img/calendar.png' %}" alt="">
+                        </div>
+                        <div class="datepicker">
+                            <p>To</p>
+                            <input type="text" class="datepicker-2" value="dd / mm / yyyy">
+                            <img src="{% static 'hotel_app/img/calendar.png' %}" alt="">
+                        </div>
+                        <div class="room-quantity">
+                            <div class="single-quantity">
+                                <p>Adults</p>
+                                <div class="pro-qty"><input type="text" value="0"></div>
+                            </div>
+                            <div class="single-quantity">
+                                <p>Children</p>
+                                <div class="pro-qty"><input type="text" value="0"></div>
+                            </div>
+                            <div class="single-quantity last">
+                                <p>Rooms</p>
+                                <div class="pro-qty"><input type="text" value="0"></div>
+                            </div>
+                        </div>
+                        <div class="room-selector">
+                            <p>Room</p>
+                            <select class="suit-select">
+                                <option>Eg. Master suite</option>
+                                <option value="">Double Room</option>
+                                <option value="">Single Room</option>
+                                <option value="">Special Room</option>
+                            </select>
+                        </div>
+                        <button type="submit">Go</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Search Filter Section End -->
+
+    <!-- About Us Section Begin -->
+    <section class="about-us spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="about-left">
+                        <div class="section-title">
+                            <span>a memorable holliday</span>
+                            <h2>A great stay in a <br />lovely hotel.</h2>
+                        </div>
+                        <p class="second-text">Blue-Jack's Hotel and Spa offers a great location for families, friends 
+                            <br> and loved ones to enjoy their vacation. It includes activities that would make your stay<br> 
+                            worthwhile. We provide free internet services, shuttle buses free breakfast buffet and lots more for our
+                             customers. 
+                        </p>
+                        <p>Common now, Book Us now <br> Do not waste time!</p>
+                        <a href="#" class="primary-btn">Make a Reservation</a>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="row">
+                        <div class="col-lg-7 col-md-7">
+                            <div class="about-img">
+                                <img src="{% static 'hotel_app/img/about/about-1.jpg' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-5">
+                            <div class="about-img second-img">
+                                <img src="{% static 'hotel_app/img/about/about-2.jpg' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-5 col-md-5">
+                            <div class="about-img third-img">
+                                <img src="{% static 'hotel_app/img/about/about-3.jpg' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-7">
+                            <div class="about-img">
+                                <img src="{% static 'hotel_app/img/about/about-4.jpg' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Us Section End -->
+
+    <!-- Milestone Counter Section Begin -->
+    <section class="milestone-counter spad set-bg" data-setbg="{% static 'hotel_app/img/about/milestone-bg.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="mc-item">
+                        <div class="mc-num">
+                            <span class="counter">25</span>
+                        </div>
+                        <div class="mc-text">
+                            <h3>Luxury Suites</h3>
+                            <p>From $399</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mc-item">
+                        <div class="mc-num">
+                            <span class="counter">35</span>
+                            <strong>K</strong>
+                        </div>
+                        <div class="mc-text">
+                            <h3>Happy Clients</h3>
+                            <p>all year long</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mc-item">
+                        <div class="mc-num">
+                            <span class="counter">365</span>
+                        </div>
+                        <div class="mc-text">
+                            <h3>Days/ Year</h3>
+                            <p>From $399</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Milestone Counter Section End -->
+
+    <!-- Award Section Begin -->
+    <section class="award-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>Our Awards</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="award-item">
+                        <img src="{% static 'hotel_app/img/about/award-img.png' %}" alt="">
+                        <h5>2011</h5>
+                        <h4>Best Hotel in Europe</h4>
+                        <span>Elite Hotel award</span>
+                        <p>To be recognized globally is our utmost goal, and times without number we have achieved that. <br>
+                        We are always here to give customers the best experience in every possible way we can. We have <br>
+                    several branches all over the wolrd at prime locations condusive for all our customers. </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="award-item">
+                        <img src="{% static 'hotel_app/img/about/award-img.png' %}" alt="">
+                        <h5>2012</h5>
+                        <h4>Best Services</h4>
+                        <span>Elite Hotel award</span>
+                        <p>We care about what our customers say about our services, and we go all out <br>
+                        to provide the best services to our customers. That is our culture and that's what we stand for.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="award-item">
+                        <img src="{% static 'hotel_app/img/about/award-img.png' %}" alt="">
+                        <h5>2014</h5>
+                        <h4>Best Hotel Spa</h4>
+                        <span>Elite Hotel award</span>
+                        <p>Your comfort is our responsibility, we love to see you look good and feel good after <br>
+                        a time well spent with us. We are looking forward to having you.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="award-item">
+                        <img src="{% static 'hotel_app/img/about/award-img.png' %}" alt="">
+                        <h5>2016</h5>
+                        <h4>Best Luxury Hotel</h4>
+                        <span>Elite Hotel award</span>
+                        <p>Blue-Jack's Hotels and Spa passion for Quality remains top priority. So we make sure everything <br>
+                        about us showcases quality. We are always ready to go the extra mile to proove that we are the best.
+                    <br> We will give you a lasting experience. Book Us Today!</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="award-item">
+                        <img src="{% static 'hotel_app/img/about/award-img.png' %}" alt="">
+                        <h5>2017</h5>
+                        <h4>2nd Place @ Best Hotel</h4>
+                        <span>Elite Hotel award</span>
+                        <p>We strive for the best, all just please our customers. From our customer service, <br>
+                        to room service, laundry, food and lots more. We have been recognized globally. Come and be 
+                    a part of this great organization</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="award-item">
+                        <img src="{% static 'hotel_app/img/about/award-img.png' %}" alt="">
+                        <h5>2018</h5>
+                        <h4>Best Hotel Spa</h4>
+                        <span>Elite Hotel award</span>
+                        <p>Our goal is to give customers a refreshing experience during their with us. 
+                            Our spa services gives customers that refreshing experience,<br>and we are recognized globally 
+                            for that!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Award Section End -->
+
+    <!-- Call To Action Begin -->
+    <section class="callto-section">
+        <div class="container">
+            <div class="callto-text">
+                <h2>Book your stay with us now!</h2>
+            </div>
+            <a href="#" class="primary-btn">Make a Reservation</a>
+        </div>
+    </section>
+    <!-- Call To Action End  -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-item">
+                        <div class="footer-logo">
+                            <a href="#"><img src="{% static 'hotel_app/img/logo2.png' %}" alt=""></a>
+                        </div>
+                        <p>Quality, Creativity, Passion</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer-item">
+                        <h5>Newsletter</h5>
+                        <div class="newslatter-form">
+                            <input type="text" placeholder="Your Email Here">
+                            <button type="submit">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer-item">
+                        <h5>Contact Info</h5>
+                        <ul>
+                            <li><img src="{% static 'hotel_app/img/placeholder.png' %}" alt="">1525 Boring Lane,<br />Los Angeles, CA</li>
+                            <li><img src="{% static 'hotel_app/img/phone.png' %}" alt="">+1 (603)535-4592</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        
+                        <ul>
+                            <li class="active"><a href="{% url 'index' %}">Home</a></li>
+                            <li><a href="{% url 'about' %}">About</a></li>
+                            <li><a href="{% url 'rooms' %}">Rooms</a></li>
+                            <li><a href="#">Facilities</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row pt-5">
+                    <div class="col-lg-12 ">
+                        <div class="small text-white text-center"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> <!-- All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="{% static 'hotel_app/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'hotel_app/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'hotel_app/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'hotel_app/js/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'hotel_app/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'hotel_app/js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'hotel_app/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'hotel_app/js/main.js' %}"></script>
+</body>
+
+{% endblock %}

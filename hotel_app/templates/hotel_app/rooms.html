@@ -1,0 +1,365 @@
+{% extends 'hotel_app/base.html' %} 
+
+{% load static %}
+
+{% block title %} Blue-Jack Hotel & Spa | Rooms {% endblock %}
+
+{% block content %}
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="inner-header">
+                <div class="logo">
+                    <a href="{% url 'index' %}"><img src="{% static 'hotel_app/img/logo2.png' %}" alt=""></a>
+                </div>
+                <div class="nav-right">
+                    <a href="#" class="primary-btn">Make a Reservation</a>
+                </div>
+                <nav class="main-menu mobile-menu">
+                    <ul>
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li><a href="{% url 'about' %}">About</a></li>
+                        <li class="active"><a href="{% url 'rooms' %}">Rooms</a></li>
+                        <li><a href="{% url 'feedback' %}">Feedback</a>
+                            <!-- <ul class="drop-menu">
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="rooms.html">Rooms</a></li>
+                                <li><a href="services.html">Services</a></li>
+                            </ul> -->
+                        </li>
+                        <li><a href="{% url 'blog' %}">News</a></li>
+                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                    </ul>
+                </nav>
+                <div id="mobile-menu-wrap"></div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Area Section Begin -->
+    <div class="hero-area set-bg other-page" data-setbg="{% static 'hotel_app/img/hero-bg1.jpg' %}">
+    </div>
+    <!-- Hero Area Section End -->
+
+    <!-- Search Filter Section Begin -->
+    <section class="search-filter other-page-filter">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <form action="#" class="check-form">
+                        <h4>Check Availability</h4>
+                        <div class="datepicker">
+                            <p>From</p>
+                            <input type="text" class="datepicker-1" value="dd / mm / yyyy">
+                            <img src="{% static 'hotel_app/img/calendar.png' %}" alt="">
+                        </div>
+                        <div class="datepicker">
+                            <p>To</p>
+                            <input type="text" class="datepicker-2" value="dd / mm / yyyy">
+                            <img src="{% static 'hotel_app/img/calendar.png' %}" alt="">
+                        </div>
+                        <div class="room-quantity">
+                            <div class="single-quantity">
+                                <p>Adults</p>
+                                <div class="pro-qty"><input type="text" value="0"></div>
+                            </div>
+                            <div class="single-quantity">
+                                <p>Children</p>
+                                <div class="pro-qty"><input type="text" value="0"></div>
+                            </div>
+                            <div class="single-quantity last">
+                                <p>Rooms</p>
+                                <div class="pro-qty"><input type="text" value="0"></div>
+                            </div>
+                        </div>
+                        <div class="room-selector">
+                            <p>Room</p>
+                            <select class="suit-select">
+                                <option>Eg. Master suite</option>
+                                <option value="">Double Room</option>
+                                <option value="">Single Room</option>
+                                <option value="">Deluxe Suite</option>
+                                <option value="">Twin Room</option>
+                            </select>
+                        </div>
+                        <button type="submit">Go</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Search Filter Section End -->
+
+    <!-- Room Section Begin -->
+    <section class="room-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="ri-slider-item">
+                        <div class="ri-sliders owl-carousel">
+                            <div class="single-img set-bg" data-setbg= "{% static 'hotel_app/img/rooms/room-5.jpg' %}"> </div>
+                            <div class="single-img set-bg" data-setbg= "{% static 'hotel_app/img/rooms/room-5i.jpg' %}"> </div>
+                            <div class="single-img set-bg" data-setbg="{% static 'hotel_app/img/rooms/room-5ii.jpg' %}"> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ri-text">
+                        <div class="section-title">
+                            <div class="section-title">
+                                <span>a memorable holiday</span>
+                                <h2>Deluxe Suite</h2>
+                            </div>
+                            <p>Our Deluxe Suite comes with a single master bed, a bedside chair, balcony cushion <br>
+                                and a study table, Deluxe suites usually has the best view amongst all suites at Blue-Jack Hotels and Spa.
+                                <br>It also comes with free internet services and free breakfast buffet.  </p>
+                            <div class="ri-features">
+                                <div class="ri-info">
+                                    <i class="flaticon-019-television"></i>
+                                    <p>Smart TV</p>
+                                </div>
+                                <div class="ri-info">
+                                    <i class="flaticon-029-wifi"></i>
+                                    <p>High Wi-fii</p>
+                                </div>
+                                <div class="ri-info">
+                                    <i class="flaticon-003-air-conditioner"></i>
+                                    <p>AC</p>
+                                </div>
+                                <div class="ri-info">
+                                    <i class="flaticon-036-parking"></i>
+                                    <p>Parking</p>
+                                </div>
+                                <div class="ri-info">
+                                    <i class="flaticon-007-swimming-pool"></i>
+                                    <p>Pool</p>
+                                </div>
+                            </div>
+                            <a href="#" class="primary-btn">Make a Reservation</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="ri-slider-item">
+                        <div class="ri-sliders owl-carousel">
+                            <div class="single-img set-bg" data-setbg="{% static 'hotel_app/img/rooms/room-7.jpg' %}"></div>
+                            <div class="single-img set-bg" data-setbg="{% static 'hotel_app/img/rooms/room-7i.jpg' %}"> </div>
+                            <div class="single-img set-bg" data-setbg="{% static 'hotel_app/img/rooms/room-7ii.jpg' %}"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="ri-text left-side">
+                        <div class="section-title">
+                            <div class="section-title">
+                                <span>a memorable holiday</span>
+                                <h2>Twin Room</h2>
+                            </div>
+                            <p>Twin Room comes with two single bed, a study table and a mini dinning table. This is best for familiy
+                                <br> siblings, co-workers, and friends. It also comes with free internet services and free breakfast buffet.
+                            </p>
+                            <div class="ri-features">
+                                <div class="ri-info">
+                                    <i class="flaticon-019-television"></i>
+                                    <p>Smart TV</p>
+                                </div>
+                                <div class="ri-info">
+                                    <i class="flaticon-029-wifi"></i>
+                                    <p>High Wi-fii</p>
+                                </div>
+                                <div class="ri-info">
+                                    <i class="flaticon-003-air-conditioner"></i>
+                                    <p>AC</p>
+                                </div>
+                                <div class="ri-info">
+                                    <i class="flaticon-036-parking"></i>
+                                    <p>Parking</p>
+                                </div>
+                                <div class="ri-info">
+                                    <i class="flaticon-007-swimming-pool"></i>
+                                    <p>Pool</p>
+                                </div>
+                            </div>
+                            <a href="#" class="primary-btn">Make a Reservation</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="ri-slider-item">
+                        <div class="ri-sliders owl-carousel">
+                            <div class="single-img set-bg" data-setbg="{% static 'hotel_app/img/rooms/room-6.jpg' %}"></div>
+                            <div class="single-img set-bg" data-setbg="{% static 'hotel_app/img/rooms/room-6i.jpg' %}"></div>
+                            <div class="single-img set-bg" data-setbg="{% static 'hotel_app/img/rooms/room-6ii.jpg' %}"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ri-text">
+                        <div class="section-title">
+                            <div class="section-title">
+                                <span>a memorable holiday</span>
+                                <h2>Double Room</h2>
+                            </div>
+                            <p>Double Room comes with a large master bed, and a bedside table and chair. It has a balcony 
+                                <br> with sea view and a connecting door to another double room.
+                            </p>
+                            <div class="ri-features">
+                                <div class="ri-info">
+                                    <i class="flaticon-019-television"></i>
+                                    <p>Smart TV</p>
+                                </div>
+                                <div class="ri-info">
+                                    <i class="flaticon-029-wifi"></i>
+                                    <p>High Wi-fii</p>
+                                </div>
+                                <div class="ri-info">
+                                    <i class="flaticon-003-air-conditioner"></i>
+                                    <p>AC</p>
+                                </div>
+                                <div class="ri-info">
+                                    <i class="flaticon-036-parking"></i>
+                                    <p>Parking</p>
+                                </div>
+                                <div class="ri-info">
+                                    <i class="flaticon-007-swimming-pool"></i>
+                                    <p>Pool</p>
+                                </div>
+                            </div>
+                            <a href="#" class="primary-btn">Make a Reservation</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="ri-slider-item">
+                        <div class="ri-sliders owl-carousel">
+                            <div class="single-img set-bg" data-setbg="{% static 'hotel_app/img/rooms/room-8.jpg' %}"></div>
+                            <div class="single-img set-bg" data-setbg="{% static 'hotel_app/img/rooms/room-8i.jpg' %}"></div>
+                            <div class="single-img set-bg" data-setbg="{% static 'hotel_app/img/rooms/room-8ii.jpg' %}"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="ri-text left-side">
+                        <div class="section-title">
+                            <div class="section-title">
+                                <span>a memorable holiday</span>
+                                <h2>Single Room</h2>
+                            </div>
+                            <p>Single room comes with a large master bed, a pull outbed and a study table.</p>
+                            <div class="ri-features">
+                                <div class="ri-info">
+                                    <i class="flaticon-019-television"></i>
+                                    <p>Smart TV</p>
+                                </div>
+                                <div class="ri-info">
+                                    <i class="flaticon-029-wifi"></i>
+                                    <p>High Wi-fii</p>
+                                </div>
+                                <div class="ri-info">
+                                    <i class="flaticon-003-air-conditioner"></i>
+                                    <p>AC</p>
+                                </div>
+                                <div class="ri-info">
+                                    <i class="flaticon-036-parking"></i>
+                                    <p>Parking</p>
+                                </div>
+                                <div class="ri-info">
+                                    <i class="flaticon-007-swimming-pool"></i>
+                                    <p>Pool</p>
+                                </div>
+                            </div>
+                            <a href="#" class="primary-btn">Make a Reservation</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Room Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-item">
+                        <div class="footer-logo">
+                            <a href="{% url 'index' %}"><img src="img/logo.png" alt=""></a>
+                        </div>
+                        <p>Quality, Creativity, Passion.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer-item">
+                        <h5>Newsletter</h5>
+                        <div class="newslatter-form">
+                            <input type="text" placeholder="Your Email Here">
+                            <button type="submit">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer-item">
+                        <h5>Contact Info</h5>
+                        <ul>
+                            <li><img src="img/placeholder.png" alt="">1525 Boring Lane,<br />Los Angeles, CA</li>
+                            <li><img src="img/phone.png" alt="">+1 (603)535-4592</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        
+                        <ul>
+                            <li class="active"><a href="{% url 'index' %}">Home</a></li>
+                            <li><a href="{% url 'about' %}">About</a></li>
+                            <li><a href="{% url 'rooms' %}">Rooms</a></li>
+                            <li><a href="#">Facilities</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row pt-5">
+                    <div class="col-lg-12 ">
+                        <div class="small text-white text-center"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> <!-- All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="{% static 'hotel_app/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'hotel_app/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'hotel_app/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'hotel_app/js/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'hotel_app/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'hotel_app/js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'hotel_app/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'hotel_app/js/main.js' %}"></script>
+</body>
+
+{% endblock %}

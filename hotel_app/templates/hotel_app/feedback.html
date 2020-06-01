@@ -2,7 +2,7 @@
 
 {% load static %}
 
-{% block title %} Blue-Jack Hotel & Spa | Contact us {% endblock %}
+{% block title %} Blue-Jack Hotel & Spa | Feedback {% endblock %}
 
 {% block content %}
 
@@ -20,22 +20,16 @@
                     <a href="{% url 'index' %}"><img src="{% static 'hotel_app/img/logo2.png' %}" alt=""></a>
                 </div>
                 <div class="nav-right">
-                    <a href="#" class="primary-btn">Make a Reservation</a>
+                    <a href="#" class="primary-btn">Hello {{ request.user.username }}</a>
                 </div>
                 <nav class="main-menu mobile-menu">
                     <ul>
                         <li><a href="{% url 'index' %}">Home</a></li>
                         <li><a href="{% url 'about' %}">About</a></li>
                         <li><a href="{% url 'rooms' %}">Rooms</a></li>
-                        <li class="active"><a href="{% url 'feedback' %}">Feedback</a>
-                            <ul class="drop-menu">
-                                <li><a href="about-us.html">About Us</a></li>
-                                <li><a href="rooms.html">Rooms</a></li>
-                                <li><a href="services.html">Services</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="{% url 'blog' %}">News</a></li>
+                        <li class="active"><a href="{% url 'feedback' %}">Feedback</a> </li>
                         <li ><a href="{% url 'contact' %}">Contact</a></li>
+                        <li><a href="{% url 'logout' %}" style="color: #f9ad81; font-weight: bold;">Logout</a></li>
                     </ul>
                 </nav>
                 <div id="mobile-menu-wrap"></div>
@@ -165,8 +159,8 @@
                             <div class="col-lg-12">
                                <!--  <input type="text" class="subject" placeholder="Subject" name="subject" required="required"> -->
                                 <textarea placeholder="Feedback Description" name="feedback_desc" maxlength="200"></textarea>
-                                
-                                <input type="submit" value="submit"  />
+
+                                <input type="submit" value="submit" class="submit-btn" style="background-color: #e35e0a;" />
                             </div>
                         </div>
                     </form>

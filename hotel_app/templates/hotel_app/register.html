@@ -2,7 +2,7 @@
 
 {% load static %}
 
-{% block title %} Blue-Jack Hotel & Spa | Contact us {% endblock %}
+{% block title %} Blue-Jack Hotel & Spa | Register {% endblock %}
 
 {% block content %}
 
@@ -20,22 +20,22 @@
                     <a href="{% url 'index' %}"><img src="{% static 'hotel_app/img/logo2.png' %}" alt=""></a>
                 </div>
                 <div class="nav-right">
-                    <a href="{% url 'booking' %}" class="primary-btn">Make a Reservation</a>
+                 <!--    <a href="#" class="primary-btn">Make a Reservation</a> -->
                 </div>
                 <nav class="main-menu mobile-menu">
                     <ul>
                         <li><a href="{% url 'index' %}">Home</a></li>
                         <li><a href="{% url 'about' %}">About</a></li>
                         <li><a href="{% url 'rooms' %}">Rooms</a></li>
-                        <!-- <li><a href="#">Pages</a>
+                        <li ><a href="{% url 'feedback' %}">Feedback</a>
                             <ul class="drop-menu">
                                 <li><a href="about-us.html">About Us</a></li>
                                 <li><a href="rooms.html">Rooms</a></li>
                                 <li><a href="services.html">Services</a></li>
                             </ul>
-                        </li> -->
+                        </li>
                         <li><a href="{% url 'blog' %}">News</a></li>
-                        <li class="active"><a href="{% url 'contact' %}">Contact</a></li>
+                        <li ><a href="{% url 'contact' %}">Contact</a></li>
                     </ul>
                 </nav>
                 <div id="mobile-menu-wrap"></div>
@@ -54,65 +54,61 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <form action="{% url 'view_room_submit' %}" method = 'post' class="check-form">
-
-                        {% csrf_token %}
-
-                        <h4>View Rooms</h4>
+                    <!-- <form action="#" class="check-form">
+                        <h4>Check Availability</h4>
                         <div class="datepicker">
                             <p>From</p>
-                            <input type="text" class="datepicker-1" placeholder ="dd / mm / yyyy" name="date_from" required>
+                            <input type="text" class="datepicker-1" value="dd / mm / yyyy">
                             <img src="{% static 'hotel_app/img/calendar.png' %}" alt="">
                         </div>
                         <div class="datepicker">
                             <p>To</p>
-                            <input type="text" class="datepicker-2" placeholder="dd / mm / yyyy" name="date_to" required>
-                            <img src="{% static 'hotel_app/img/calendar.png' %}"  alt="">
-                        </div>
-                        <div class="room-quantity">
+                            <input type="text" class="datepicker-2" value="dd / mm / yyyy">
+                            <img src="{% static 'hotel_app/img/calendar.png' %}" alt="">
+                        </div> -->
+                        <!-- <div class="room-quantity">
                             <div class="single-quantity">
                                 <p>Adults</p>
-                                <div class="pro-qty"><input type="text" placeholder="0" name="adult" required></div>
+                                <div class="pro-qty"><input type="text" value="0"></div>
                             </div>
                             <div class="single-quantity">
                                 <p>Children</p>
-                                <div class="pro-qty"><input type="text" placeholder="0" name="children" required></div>
+                                <div class="pro-qty"><input type="text" value="0"></div>
                             </div>
                             <div class="single-quantity last">
                                 <p>Rooms</p>
-                                <div class="pro-qty"><input type="text" placeholder="0" name="no_rooms" required=></div>
-                            </div>
-                        </div>
+                                <div class="pro-qty"><input type="text" value="0"></div>
+                            </div> -->
+                        <!-- </div>
                         <div class="room-selector">
                             <p>Room</p>
-                            <select class="suit-select" name="available_room" required="required">
-                                <option>Available Rooms</option>
-                                <!-- <option value="">Double Room</option>
+                            <select class="suit-select">
+                                <option>Eg. Master suite</option>
+                                <option value="">Double Room</option>
                                 <option value="">Single Room</option>
-                                <option value="">Special Room</option> -->
+                                <option value="">Special Room</option>
                             </select>
                         </div>
-                          <!-- <button type="submit">Go</button> -->
-                      <input type="submit" value="submit"  /> 
-                    </form>
+                        <button type="submit">Go</button>
+                    </form> -->
                 </div>
             </div>
         </div>
     </section>
     <!-- Search Filter Section End -->
 
-    <!-- Contact Section Begin -->
-    <section class="contact-section spad">
+    <!-- registration Section Begin -->
+    <section style="margin-top: -140px;" class="contact-section spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="contact-title">
                         <div class="section-title">
                             <span>a memorable holiday</span>
-                            <h2>Located in the center of <br />Abuja</h2>
-                        </div>
+                            <h2>Sign In and Registration Form </h2>
+                       <!--  </div>
                         <a href="#" class="primary-btn">Get Directions</a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             {% if success %}
@@ -121,56 +117,63 @@
                 <p style="color: #F9Ad81; font-weight: bold;"> {{success}}</p>
             </div>
         {% endif %}
-            <div class="row">
-                <div class="col-lg-8">
-                    <form action="{% url 'contact_submit' %}" method="post" enctype="multipart/form-data" class="contact-form">
+    </div>
+</div>
+</div>
+</section>
 
-                        {% csrf_token %}
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <input type="text" placeholder="Your name" name="names"  required="required">
-                            </div>
-                            <div class="col-lg-6">
-                                <input type="email" placeholder="Your email" name="email" required="required">
-                            </div>
-                            <div class="col-lg-12">
-                                <input type="text" class="subject" placeholder="Subject" name="subject" required="required">
-                                <textarea placeholder="Message" name="message"></textarea>
-                                <input type="submit" value="submit"  />
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-lg-4">
-                    <div class="info-box">
-                        <img src="{% static 'hotel_app/img/logo2.png' %}" alt="">
-                        <ul>
-                            <li>1525 Madison Lane, <br />Los Angeles, CA</li>
-                            <li>+1 (603)535-4592</li>
-                            <li>hello@youremail.com</li>
-                            <li>Everyday: 06:00 -22:00</li>
-                        </ul>
-                        <div class="social-links">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-youtube-play"></i></a>
-                        </div>
-                    </div>
-                </div>
+<div class="mycontainer" id="mycontainer" style="margin-left: 120px; margin-top: -100px; margin-bottom: 10px">
+    <div class="form-container sign-up-container">
+        <form action="{% url 'user_registration' %}" method="post" class="myform">
+            {% csrf_token %}
+            <h2 class="myh1">Create Account</h1>
+            <!-- <div class="social-container">
+                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div> -->
+         <!--    <span>or use your email for registration</span> -->
+            <input type="text" placeholder="Name" name="username" class="myinput" required="required" />
+            <input type="email" placeholder="Email" name="email" class="myinput" required="required" />
+            <input type="password" placeholder="Password" name="password1" class="myinput" required="required" />
+            <button class="mybutton">Sign Up</button>
+        </form>
+    </div>
+    <div class="form-container sign-in-container">
+        <i> <span style="color: red"> {{error}} </span> </i>
+        <form action="{% url 'login_process' %}" method="post" class="myform">
+
+            {% csrf_token %}
+            <h2 class="myh1">Sign in</h1>
+            <!-- <div class="social-container">
+                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div> -->
+            <!-- <span>or use your account</span> -->
+            <input type="text" placeholder="Email" name="username" class="myinput" required="required" />
+            <input type="password" placeholder="Password" name="password1" class="myinput" required="required" />
+            <a href="#">Forgot your password?</a>
+            <button class="mybutton">Sign In</button>
+        </form>
+    </div>
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h2 class="myh1">Welcome Back!</h2>
+                <p class="myp" style="font-weight: bold;">To keep connected with us please login with your personal info</p>
+                <button class="ghost" id="signIn">Sign In</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h2 class="myh1">Hello, Friend!</h1>
+                <p class="myp" style="font-weight: bold;">Enter your personal details and start your journey with us</p>
+                <button class="ghost" id="signUp">Sign Up</button>
             </div>
         </div>
-    </section>
-    <!-- Contact Section End -->
-
-    <!-- Map Section Begin -->
-    <div class="map">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15764.709678144207!2d7.362923866323815!3d8.955793693351362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e7213606fc905%3A0x8f687ce451375039!2sTrademore%20Estate%2C%20Abuja!5e0!3m2!1sen!2sng!4v1590680505557!5m2!1sen!2sng" width="600" height="910" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
-    <!-- Map Section End -->
+</div>
+
+    <!-- registration Section End -->
 
     <!-- Footer Section Begin -->
     <footer class="footer-section">
@@ -241,6 +244,21 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> <!-- 
     <script src="{% static 'hotel_app/js/jquery.slicknav.js' %}"></script>
     <script src="{% static 'hotel_app/js/owl.carousel.min.js' %}"></script>
     <script src="{% static 'hotel_app/js/main.js' %}"></script>
+
+    <script type="text/javascript">
+        
+        const signUpButton = document.getElementById('signUp');
+        const signInButton = document.getElementById('signIn');
+        const container = document.getElementById('mycontainer');
+
+        signUpButton.addEventListener('click', () => {
+        container.classList.add("right-panel-active");
+    });
+
+        signInButton.addEventListener('click', () => {
+        container.classList.remove("right-panel-active");
+    });
+    </script>
 </body>
 
 {% endblock %}
